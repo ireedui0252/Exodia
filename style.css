@@ -47,6 +47,9 @@ html {
     align-items: center;
     margin: auto;
 }
+.header .navbar .bars{
+  display: none;
+}
 .header .navbar img{
     margin-left: 2rem;
     margin-right: 8rem;
@@ -126,8 +129,77 @@ html {
     transform: translate(-50%, -50%);
     font-family: "Cookie";
   }
+/* phone ehlel */
+@media(max-width: 576px){
+  .header .navbar a{
+    display: none;
+  }
+  .header .navbar .bars{
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #5dfd2d;
+    display: flex;
+    align-items: center;
+  }
+  .header .navbar img{
+    width: 50px;
+    height: 50px;
+  }
+}
+@media(max-width: 768px){
+  .header .navbar a{
+    font-size: 12px;
+  }
+  .header .glass .right h3 {
+    font-size: 28px;
+  }
+}
+@media(max-width: 375px){
 
+  .header{
+    height: 100vh;
+    margin-bottom: 1rem;
+}
+  .header .navbar .bars{
+    display: block;
+    color: #5dfd2d;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
 
+  }
+  .header .navbar a{
+    display: none;
+  }
+  .header .navbar img{
+    margin-left: 1rem;
+    margin-right: 8rem;
+    width: 25px;
+    color: #85fc81;
+    margin-top: 10px;
+}
+  .header .glass .right h3 {
+    font-size: 22px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .header .glass .left p {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Cookie";
+  }
+}
   
 /* deed heseg duussan */
 
@@ -244,6 +316,27 @@ html {
     margin-top: 30px;
 }
 
+@media(max-width: 375px){
+  .container{
+    width: 100%;
+    display: block;
+    flex-direction: column;
+  }
+  .container .card{
+    margin: auto;
+    margin-top: 50px;
+  }
+}
+
+@media(max-width: 1024px){
+  .container{
+    width: 100%;
+  }
+  .container .card{
+    margin: auto;
+    margin-top: 50px;
+  }
+}
 /* about end duusav */
 
 .hobby{
@@ -260,7 +353,7 @@ height: 100vh;
 .hobby .text h2{
     font-family: 'Courgette';
 }
-span:before{
+span::before{
     content: '';
     animation: animate infinite 8s;
 }
@@ -297,20 +390,20 @@ span:before{
   }
 
   .swiper-slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
     font-weight: bold;
     color: #fff;
-    background-size: cover;
-    background-position: center;
   }
   .hobby .swiper .swiper-slide img{
-      background-position: center;
-      background-size: cover;
+      object-fit: cover;
       width: 100%;
-      height: 90vh;
+      height: 100%;
   }
 
   .swiper-slide:nth-child(1n) {
@@ -342,8 +435,45 @@ span:before{
   .swiper-slide:nth-child(10n) {
     background-color: rgb(54, 94, 77);
   }
+@media(max-width: 1024px){
+  .hobby{
+    width: 100%;
+    }
+  .hobby .text h2{
+    font-size: 16px;
+  }
+  .hobby .swiper {
+    margin: auto;
+    width: 80%;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 600px;
+  }
+}
 
-
+@media(max-width: 375px){
+  .hobby{
+    width: 375px;
+    height: auto;
+    }
+  .hobby .text h2{
+    font-size: 16px;
+  }
+  .hobby .swiper {
+    margin: auto;
+    width: 80%;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 250px;
+  }
+  .hobby .swiper .swiper-slide img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+}
 /* hobby end duusav */
 
 
@@ -524,7 +654,14 @@ span:before{
     height: 20px;
     margin: 0 5px;
   }
-  
+  @media screen and (max-width: 375px) {
+    .app-title {
+      flex-direction: row;
+      font-size: 20px;
+    }
+  }
+
+
   @media screen and (max-width: 520px) {
     .screen-body {
       flex-direction: column;
@@ -536,6 +673,7 @@ span:before{
   
     .app-title {
       flex-direction: row;
+      font-size: 20px;
     }
   
     .app-title span {
@@ -551,7 +689,9 @@ span:before{
     .screen-body {
       padding: 40px;
     }
-  
+    .app-title {
+      font-size: 15px;
+    }
     .screen-body-item {
       padding: 0;
     }

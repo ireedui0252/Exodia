@@ -146,6 +146,9 @@ html {
     width: 50px;
     height: 50px;
   }
+  .header .glass{
+    flex-direction: column;
+  }
 }
 @media(max-width: 768px){
   .header .navbar a{
@@ -181,6 +184,9 @@ html {
     color: #85fc81;
     margin-top: 10px;
 }
+.header .glass{
+  flex-direction: column;
+}
   .header .glass .right h3 {
     font-size: 22px;
     color: white;
@@ -191,7 +197,8 @@ html {
   }
   
   .header .glass .left p {
-    font-size: 12px;
+    width: 100%;
+    font-size: 14px;
     color: white;
     position: absolute;
     top: 50%;
@@ -438,6 +445,7 @@ span::before{
 @media(max-width: 1024px){
   .hobby{
     width: 100%;
+    height: 300px;
     }
   .hobby .text h2{
     font-size: 16px;
@@ -445,6 +453,7 @@ span::before{
   .hobby .swiper {
     margin: auto;
     width: 80%;
+    height: 100%;
   }
   .swiper-slide {
     width: 100%;
@@ -655,6 +664,10 @@ span::before{
     margin: 0 5px;
   }
   @media screen and (max-width: 375px) {
+    .container {
+      margin-top: 20px;
+      padding: 10px;
+    }
     .app-title {
       flex-direction: row;
       font-size: 20px;
